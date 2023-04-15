@@ -1,0 +1,21 @@
+---
+version: '3'
+services:
+  smtp:
+    image: axllent/mailpit
+    container_name: mail-api_smtp
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+  db:
+    image: postgres:15
+    container_name: mail-api_db
+    environment:
+      POSTGRES_PASSWORD: postgres
+    healthcheck:
+      interval: 1s
+      retries: 5
+      test: pg_isready
+      timeout: 5s
+    ports:
+      - "5432:5432"

@@ -1,0 +1,6 @@
+/.coverage.out
+/.idea/
+/*.exe
+/*.iml
+/mail-api
+/db/gen/

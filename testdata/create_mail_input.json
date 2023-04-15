@@ -1,0 +1,13 @@
+{
+  "from": "from@tests.org",
+  "to": [
+    "to1@tests.org",
+    "to2@tests.org"
+  ],
+  "cc": [
+    "cc1@tests.org",
+    "cc2@tests.org"
+  ],
+  "subject": "Test",
+  "body": "Hello, World!"
+}
