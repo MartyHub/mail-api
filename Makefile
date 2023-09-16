@@ -1,4 +1,3 @@
-default: all
 
 all: sqlc tidy lint test build
 
@@ -23,6 +22,7 @@ migrate:
 
 sqlc:
 	sqlc generate --experimental --file db/sqlc.yaml
+	goimports -w db/gen/querier.go
 
 run:
 	MAIL_API_DATABASE_URL=postgres://postgres:postgres@localhost:5432/postgres \

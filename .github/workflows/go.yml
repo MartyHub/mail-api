@@ -18,7 +18,7 @@ jobs:
           go-version: 'stable'
 
       - name: Install sqlc
-        run: go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
+        run: go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
 
       - name: Generate DB code
         run: make sqlc
