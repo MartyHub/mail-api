@@ -51,6 +51,7 @@ func (s service) Create(ctx context.Context, input CreateInput) (CreateOutput, e
 
 	err := s.repo.Wrap(ctx, db.TxWrite(), func(querier gdb.Querier) error {
 		now := s.repo.Now()
+
 		entity, err := querier.CreateMail(ctx, gdb.CreateMailParams{
 			FromAddress:  input.From,
 			RecipientsTo: input.To,
