@@ -21,7 +21,7 @@ migrate:
 	tern migrate --config db/tern_docker.conf --migrations db/migrations/
 
 sqlc:
-	sqlc generate --experimental --file db/sqlc.yaml
+	sqlc generate --file db/sqlc.yaml
 	goimports -w db/gen/querier.go
 
 run:
