@@ -22,7 +22,7 @@ type Config struct {
 
 func (c Config) Stop() {
 	// Send one stop signal for each sender
-	for i := 0; i < c.Count; i++ {
+	for range c.Count {
 		c.Stopper <- true
 	}
 }
